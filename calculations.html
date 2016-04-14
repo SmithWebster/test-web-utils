@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript calculations</title>
+    <script src="js/calculations.js"></script>
+</head>
+<body>
+
+<div>
+    <span>three(times(five())) : </span>
+    <span id="one"></span>
+</div>
+<div>
+    <span>four(plus(eight())) : </span>
+    <span id="two"></span>
+</div>
+<div>
+    <span>eight(minus(two())) : </span>
+    <span id="three"></span>
+</div>
+<div>
+    <span>six(dividedBy(three())) : </span>
+    <span id="four"></span>
+</div>
+
+<script>
+    var r1 = three(times(five()))();
+    var r2 = four(plus(eight()))();
+    var r3 = eight(minus(two()))();
+    var r4 = six(dividedBy(three()))();
+
+    document.getElementById('one').innerHTML = r1;
+    document.getElementById('two').innerHTML = r2;
+    document.getElementById('three').innerHTML = r3;
+    document.getElementById('four').innerHTML = r4;
+</script>
+
+</body>
+</html>
+
+
