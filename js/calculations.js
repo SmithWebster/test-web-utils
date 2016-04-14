@@ -4,9 +4,7 @@ function num(operator, num) {
             return num;
         };
     } else if (typeof operator == 'function') {
-        return function() {
-            return operator(num);
-        }
+        return operator(num);
     }
 }
 

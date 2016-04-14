@@ -8,14 +8,19 @@ function autocomplete(input, dictionary, maxCount = 5) {
     var matches = [];
     var re = new RegExp(input, 'i');
 
+    var lettersOnly = function(sentence) {
+        return sentence.replace(/[^a-zA-Z]+/g, '');
+    };
+
     var count = 0;
     for (var i in dictionary) {
         if (maxCount > 0 && count >= maxCount) {
             break;
         }
 
-        if (dictionary[i].match(re)) {
-            matches.push(dictionary[i]);
+        var sentence = lettersOnly(dictionary[i]);
+        if (sentence.match(re)) {
+            matches.push(sentence);
             count++;
         }
     }

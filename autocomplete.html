@@ -23,14 +23,17 @@
 </div>
 
 <script>
-    var input = 'ai';
+    var input = 'a';
     var dict = [
         'airplane',
         'airport',
         'apple',
         'ball',
         'airbus',
+        'basket',
+        'citrus',
         'ai adobe illustrator',
+        '^a%$35bcd',
     ]
 
     document.getElementById('input').innerHTML = input;
@@ -38,7 +41,6 @@
 
     var res = autocomplete(input, dict);
     document.getElementById('out').innerHTML = res;
-    console.log(res);
 </script>
 
 </body>
